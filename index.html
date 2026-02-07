@@ -8,6 +8,8 @@
   <!-- Retro pixel font -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
   <style>
     body {
       position: relative;
@@ -117,6 +119,24 @@
     .itch-button:hover {
       background: #ff7a7a;
     }
+    /* Disabled link for WIP project */
+    .disabled-link {
+      cursor: pointer;        /* показывает, что клик ничего не делает */
+      text-decoration: none;
+      background-color: #6fa58b;  /* зелёная кнопка */
+      color: #000;
+      padding: 12px 16px;
+      border-radius: 6px;
+      display: inline-block;
+      
+    }
+
+    /* Hover эффект — слегка подсвечивать, но без действия */
+    .disabled-link:hover {
+      background-color: #87bfa3;  /* совпадает с зеленой кнопкой */
+    }
+
+
     /* Atmospheric vignette on sides */
     body::before {
       content: "";
@@ -207,7 +227,7 @@
       <img src="images/fishing_spot_3.gif" alt="Fishing Spot images">
     </div>
 
-    <a href="#">Work in progress</a>
+    <a href="#" class="disabled-link">Work in progress</a>
   </div>
 
 </section>
@@ -223,6 +243,15 @@
 <footer>
   © 2026 Alexandr Morozov
 </footer>
+
+<script>
+  document.querySelectorAll('.disabled-link').forEach(el => {
+    el.addEventListener('click', function(e) {
+      e.preventDefault(); // отменяет стандартное поведение ссылки
+    });
+  });
+</script>
+
 
 </body>
 </html>
