@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alexandr Morozov — Game Designer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Retro pixel font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      position: relative;
+      margin: 0;
+      font-family: 'Press Start 2P', monospace;
+      background: #0f1115;
+      color: #eaeaea;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    header, section, footer {
+      position: relative;
+      z-index: 2;
+    }
+
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      background: #151922;
+    }
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Background zones */
+    .zone-blue {
+      background: linear-gradient(
+        to bottom,
+        #0f1115 0%,
+        #151922 70%,
+        #1b2030 100%
+      );
+    }
+
+
+    .zone-green {
+      background: linear-gradient(
+        to bottom,
+        #1b2030 0%,
+        #1b2f26 5%,
+        #16261f 60%,
+        #0f1a14 100%
+      );
+    }
+
+    h1, h2, h3 {
+      color: #ffffff;
+      line-height: 1.4;
+    }
+    .project {
+      background: #1b2030;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    /* Green project card for horror section */
+    .project-green {
+      background: rgba(27, 47, 38, 0.35);
+      backdrop-filter: blur(2px);
+    }
+
+    /* Green button only inside green project */
+    .project.project-green a {
+      background: #6fa58b;
+    }
+
+    .project.project-green a:hover {
+      background: #87bfa3;
+    }
+
+
+
+    .media {
+      margin: 15px 0;
+    }
+    .media img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+      image-rendering: pixelated;
+    }
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 16px;
+      background: #7aa2ff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .project a:hover {
+      background: #9bb5ff;
+    }
+    .itch-button {
+      display: inline-block;
+      padding: 16px 20px;
+      background: #fa5c5c;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .itch-button:hover {
+      background: #ff7a7a;
+    }
+    /* Atmospheric vignette on sides */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0) 55%,
+        rgba(0, 0, 0, 0.6) 100%
+      );
+      z-index: 0;
+    }
+
+    /* Subtle film grain / noise */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Crect width='1' height='1' fill='white'/%3E%3C/svg%3E");
+      z-index: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Alexandr Morozov</h1>
+  <p>Game Designer / Indie Developer</p>
+</header>
+
+<section>
+  <h2>About me</h2>
+  <p>
+    Game Designer and Indie Developer.
+    I focus on combat systems, unusual but compelling storytelling, and a strong game feel.
+    Here you can find my projects that I have worked on and that I am currently working on.
+  </p>
+
+</section>
+
+<section class="zone-blue">
+  <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Prototype: Lost in Reflection</h3>
+    <p>
+      Side-scroller prototype of a combat system with directional blocking.
+      Developed during a game jam with a limited timeframe.
+    </p>
+
+    <div class="media">
+      <!-- Replace src with your image or gif -->
+      <img src="images/lost_in_reflection.gif" alt="Lost in Reflection gameplay">
+      <img src="images/lost_in_reflection_1.gif" alt="Lost in Reflection gameplay">
+      <img src="images/lost_in_reflection_2.gif" alt="Lost in Reflection gameplay">
+      <img src="images/lost_in_reflection_3.gif" alt="Lost in Reflection gameplay">
+    </div>
+
+    <a class="itch-button" href="https://daspil.itch.io/lostinreflection" target="_blank">
+    Download on itch.io
+  </a>
+  </div>
+
+  </section>
+
+<section class="zone-green">
+
+  <div class="project project-green">
+    <h3>Work in progress: Fishing Spot</h3>
+    <p>
+      A psychological horror game in PSX-style about fishing.
+    </p>
+
+    <div class="media">
+      <!-- Replace src with your image or gif -->
+      <img src="images/fishing_spot.gif" alt="Fishing Spot images">
+      <img src="images/fishing_spot_2.gif" alt="Fishing Spot images">
+      <img src="images/fishing_spot_3.gif" alt="Fishing Spot images">
+    </div>
+
+    <a href="#">Work in progress</a>
+  </div>
+
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>Email: daspil888@gmail.com</p>
+  <p>  <a class="itch-button" href="https://daspil.itch.io/" target="_blank">
+    Visit my itch.io
+  </a></p>
+</section>
+
+<footer>
+  © 2026 Alexandr Morozov
+</footer>
+
+</body>
+</html>
